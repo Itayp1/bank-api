@@ -1,0 +1,16 @@
+curl --location --request PUT 'https://bank-discount-api.herokuapp.com/api/customer' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MDU2NTgxNTcsImRhdGEiOnsiYmFuayI6ImRpc2NvdW50In0sImlhdCI6MTYwNTY1NDU1N30.K6CNyhalfH49qUdk8-QnVEWh4qXt5K3NEw_vHdZU7TITKcsEGZymMXreVutk8_gsehzfJxx59EoyB0Ru-I14CQ' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "customerID": "Israeli-222210023",
+    "accountPermissions": [
+        {
+            "scope": "balances",
+            "accountStatus": "Active"
+        },
+        {
+            "scope": "transactions",
+            "accountStatus": "Terminated"
+        }
+    ]
+}'
